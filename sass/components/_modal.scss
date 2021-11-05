@@ -46,7 +46,7 @@
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.button-close:focus .btn-close-icon,
-.button-close:hover .btn-close-icon {
+.button-close:focus .button-close__icon,
+.button-close:hover .button-close__icon {
   fill: var(--complementary-accent-color);
 }

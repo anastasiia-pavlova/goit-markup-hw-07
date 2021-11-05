@@ -113,7 +113,7 @@
   overflow: hidden;
 }
 
-.checkbox:checked + .order__check-icon {
+.order__checkbox:checked + .order__check-icon {
   background-image: url(../images/icon-check.svg);
   border: none;
   background-size: cover;
