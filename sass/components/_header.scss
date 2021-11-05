@@ -32,31 +32,28 @@
   letter-spacing: 0.02em;
 
   transition: color var(--transition-duration) var(--transition-timing-function);
-}
+  &:hover,
+  &:focus {
+    color: var(--complementary-accent-color);
+  }
+  &--current {
+    color: var(--complementary-accent-color);
+    position: relative;
+  }
+  &--current::after {
+    content: "";
 
-.navigation__link:hover,
-.navigation__link:focus {
-  color: var(--complementary-accent-color);
-}
+    position: absolute;
+    bottom: -1px;
+    left: 0;
 
-.navigation__link--current {
-  color: var(--complementary-accent-color);
-  position: relative;
-}
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
 
-.navigation__link--current::after {
-  content: "";
-
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-
-  background-color: var(--complementary-accent-color);
+    background-color: var(--complementary-accent-color);
+  }
 }
 
 /* Контакты в шапке */
@@ -82,11 +79,10 @@
   letter-spacing: 0.02em;
 
   transition: color var(--transition-duration) var(--transition-timing-function);
-}
-
-.contact__link:hover,
-.contact__link:focus {
-  color: var(--complementary-accent-color);
+  &:hover,
+  &:focus {
+    color: var(--complementary-accent-color);
+  }
 }
 
 .contact__icon {

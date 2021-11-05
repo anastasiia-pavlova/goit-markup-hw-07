@@ -1,8 +1,5 @@
 .clients__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  @extend %grid;
 }
 
 .clients__item {
@@ -12,9 +9,7 @@
 }
 
 .clients__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex;
   border: 1px solid var(--social-client-links-color);
   border-radius: 4px;
   height: 92px;
@@ -22,6 +17,11 @@
 
   transition: border var(--transition-duration)
     var(--transition-timing-function);
+  &:focus,
+  &:hover {
+    border: 1px solid var(--complementary-accent-color);
+    outline: none;
+  }
 }
 
 .clients__icon {
@@ -30,15 +30,8 @@
   fill: currentColor;
 
   transition: fill var(--transition-duration) var(--transition-timing-function);
-}
-
-.clients__link:focus,
-.clients__link:hover {
-  border: 1px solid var(--complementary-accent-color);
-  outline: none;
-}
-
-.clients__link:focus .clients__icon,
-.clients__link:hover .clients__icon {
-  fill: var(--complementary-accent-color);
+  .clients__link:focus &,
+  .clients__link:hover & {
+    fill: var(--complementary-accent-color);
+  }
 }

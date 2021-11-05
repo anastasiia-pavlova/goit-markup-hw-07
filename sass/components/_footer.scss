@@ -10,13 +10,12 @@
   align-items: baseline;
 }
 
-.footer__logo--accent {
-  color: var(--accent-text-color);
-}
-
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+  &--accent {
+    color: var(--accent-text-color);
+  }
 }
 
 .address {
@@ -38,11 +37,10 @@
 
 .address__link {
   transition: color var(--transition-duration) var(--transition-timing-function);
-}
-
-.address__link:hover,
-.address__link:focus {
-  color: var(--complementary-accent-color);
+  &:hover,
+  &:focus {
+    color: var(--complementary-accent-color);
+  }
 }
 
 .footer__address-block {
